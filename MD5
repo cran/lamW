@@ -1,0 +1,15 @@
+3154f79363185607e24a2eef56c54f9d *DESCRIPTION
+9fe401759a8da27089ef3979da17fa74 *LICENSE
+0129236b819a11725c8940b8c03bfaac *NAMESPACE
+eb207fb38f6d94236d79e8fc052de795 *R/RcppExports.R
+8647d73e48262fb1b4996f1137fda004 *R/lamW.R
+e45886e55294d13c187986b217f73104 *README.md
+e8d098103b3536fef15a3698ac26b8c8 *build/partial.rdb
+284d3e8bcd2bea56a3de1b43d030b731 *inst/News.Rd
+726f1a8ba0ebe84c45c2a5b108d40ffc *man/lamW-internal.Rd
+51407131a7d77f0876efbbc8b1bb8f1c *man/lamW-package.Rd
+8d6098f7d903f0385460767be4c3cbc2 *man/lamW.Rd
+643d112689edd20bbef9596f5fc2e8ab *src/RcppExports.cpp
+c5c14cc1d8ef66b602309b4bb661a2e9 *src/lambertW.cpp
+98957ce4a115c8bff831cace88fa1557 *tests/testthat.R
+052658bd06560ea56bfb22c8b3344d53 *tests/testthat/test-lamW.R

@@ -1,0 +1,1 @@
+**lamW** is an `R` package which calculates the real-valued branches of the [Lambert-W function](https://en.wikipedia.org/wiki/Lambert_W_function).
