@@ -12,14 +12,11 @@
 \tabular{ll}{
 Package: \tab lamW\cr
 Type: \tab Package\cr
-Version: \tab 0.1-1\cr
-Date: \tab 2015-05-20\cr
+Version: \tab 0.1-2\cr
+Date: \tab 2015-10-07\cr
 License: \tab BSD_2_clause \cr
 }
 }
-\author{
-Avraham Adler
-Maintainer: Avraham Adler <Avraham.Adler@gmail.com>
-}
+\author{Avraham Adler \email{Avraham.Adler@gmail.com}}
 \keyword{package}
 \keyword{NumericalMathematics}

@@ -1,8 +1,8 @@
 Package: lamW
 Type: Package
 Title: Lambert-W Function
-Version: 0.1-1
-Date: 2015-05-20
+Version: 0.1-2
+Date: 2015-10-07
 Authors@R: c(person(given="Avraham", family="Adler", role=c("aut", "cph", "cre"), email="Avraham.Adler@gmail.com"))
 Description: Implements both real-valued branches of the Lambert-W function, also known as the product logarithm, without the need for installing the entire GSL.
 License: BSD_2_clause + file LICENSE
@@ -12,8 +12,8 @@ Suggests: testthat
 NeedsCompilation: yes
 URL: https://bitbucket.org/aadler/lamw
 BugReports: https://bitbucket.org/aadler/lamw/issues
-Packaged: 2015-05-20 17:35:50 UTC; aadler00
+Packaged: 2015-10-08 02:27:37 UTC; Parents
 Author: Avraham Adler [aut, cph, cre]
 Maintainer: Avraham Adler <Avraham.Adler@gmail.com>
 Repository: CRAN
-Date/Publication: 2015-05-21 01:05:20
+Date/Publication: 2015-10-08 13:40:06

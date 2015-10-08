@@ -17,13 +17,13 @@ lambertWm1(x)
 The Lambert-W function is defined for all real \eqn{x \geq -\frac{1}{e}}{x >= -1/e}. It has two values in the interval \eqn{(-\frac{1}{e}, 0)}{(-1/e, 0)}. The values strictly greater than -1 are assigned to the \dQuote{principal} branch, also referred to as \eqn{W_0}{W0}, and the values strictly less than -1 are assigned to a secondary branch, referred to as \eqn{W_{-1}}{Wm1}. For non-negative \eqn{x}, only the principal branch exists as the other real-valued branch approaches negative infinity as \eqn{x} approaches 0. The algorithms used to calculate the values predominantly follow those in the reference, with some simplifications. There are many applications in which the Lambert-W function is useful, such as combinatorics, physics, and hydrology. The interested reader is directed to the reference for more detail.
 }
 \value{
-Both functions return the appropriate values in the intervals for which they are defined. Outside of those intervals, they will return \code{NaN}.
+Both functions return the appropriate values in the intervals for which they are defined. Outside of those intervals, they will return \code{NaN}, except that \code{lambertW0(Inf)} will return its limit \code{Inf} and \code{lambertWm1(0)} will return its limit -\code{Inf}.
 }
 \references{
 Corless, R. M.; Gonnet, G. H.; Hare, D. E.; Jeffrey, D. J. & Knuth, D. E. "On the Lambert W function", Advances in Computational Mathematics, Springer, 1996, 5, 329-359
 }
 \author{
-Avraham Adler \code{<Avraham.Adler@gmail.com>}
+Avraham Adler \email{Avraham.Adler@gmail.com}
 }
 \seealso{
 This package provides similar functionality to the \code{\link[gsl]{Lambert}} functions in the \code{gsl} package without having to obtain or install the \acronym{GSL}. It also provides similar functionality to the \code{\link[LambertW]{W}} function in the \code{LambertW} package, which itself imports the \code{gsl} package.
