@@ -21,6 +21,8 @@ Both functions return the appropriate values in the intervals for which they are
 }
 \references{
 Corless, R. M.; Gonnet, G. H.; Hare, D. E.; Jeffrey, D. J. & Knuth, D. E. "On the Lambert W function", Advances in Computational Mathematics, Springer, 1996, 5, 329-359
+
+Veberic, D. "Lambert W function for applications in physics", Computer Physics Communications, 183(12), 2012, 2622-2628.
 }
 \author{
 Avraham Adler \email{Avraham.Adler@gmail.com}
