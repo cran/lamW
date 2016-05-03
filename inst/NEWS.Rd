@@ -1,9 +1,19 @@
 \name{NEWS}
 \alias{NEWS}
-\title{NEWS file for the \code{\link[lamW]{lamW}} package}
-\note{This project attempts to follow \href{http://semver.org/}{Semantic Versioning}}
+\title{NEWS file for the lamW package}
 
-\section{Unreleased}{}
+\section{Version 1.1.1 (2016-05-02)}{
+  \subsection{Added}{
+    \itemize{
+      \item Added testing for proper behavior near 0 due to log in Fritsch step implementation
+    }
+  }
+  \subsection{Fixed}{
+    \itemize{
+      \item Edited NEWS.Rd so that it shows properly on CRAN
+    }
+  }
+}
 
 \section{Version 1.1.0 (2016-03-15)}{
   \subsection{Changed}{
@@ -11,17 +21,12 @@
       \item Switched from exclusively using Halley iteration to usually using Fritsch iteration resulting in a significant increase in speed in both branches
     }
   }
-  \subsection{Fixed}{
-    \itemize{
-      \item Removed UTF encoding from NEWS so that CRAN can show it properly
-    }
-  }
 }
 
 \section{Version 1.0.0 (2015-12-27)}{
   \subsection{Added}{
     \itemize{
-      \item Added explicit exportation of headers for use in the \link[lambertW]{LambertW} package (Thanks to Georg M. Gorg).
+      \item Added explicit exportation of headers for use in the \link[lambertW]{LambertW} package (Thanks to Georg M. Goerg).
     }
   }
   \subsection{Changed}{
@@ -34,7 +39,7 @@
   }
 }
 
-\section{Changes in version 0.1-2 (2015-10-07)}{
+\section{Version 0.1-2 (2015-10-07)}{
   \subsection{Added}{
     \itemize{
       \item Have both branches of the function return their respective limits. The main branch returns \code{Inf} when it is passed \code{Inf} and the secondary branch returns -\code{Inf} when it is passed 0 (Thanks to Georg M. Gorg)
@@ -48,7 +53,7 @@
   }
 }
 
-\section{Changes in version 0.1-1 (2015-05-20)}{
+\section{Version 0.1-1 (2015-05-20)}{
   \subsection{Fixed}{
     \itemize{
       \item Remove extra parenthesis which was causing boolean to be passed to \code{fabs} (thanks to Dr. Brian Ripley)
@@ -58,7 +63,7 @@
     \itemize{
       \item Added URL and Bugreports to DESCRIPTION
       \item Implemented minor optimizations to reduce number of needed calculations
-      \item Added comments to source explaining Halley step and provenance of numeric coefficients in Padé approximant
+      \item Added comments to source explaining Halley step and provenance of numeric coefficients in Pade approximant
       \item Added more robust unit testing
     }
   }
@@ -70,7 +75,7 @@
   }
 }
 
-\section{Changes in version 0.0-1 (2015-05-19)}{
+\section{Version 0.0-1 (2015-05-19)}{
   \itemize{
     \item Initial release
   }
