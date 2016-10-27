@@ -2,6 +2,15 @@
 \alias{NEWS}
 \title{NEWS file for the lamW package}
 
+\section{Version 1.2.0 (2016-10-26)}{
+
+  \subsection{Changed}{
+    \itemize{
+      \item Now using RcppParallel for calculation. Speedup when calculating more than one value at a time should be noticeable, e.g. around a 5x speedup on an 8 core machine. There should be no noticeable change when calculating single values at a time.
+    }
+  }
+}
+
 \section{Version 1.1.1 (2016-05-02)}{
   \subsection{Added}{
     \itemize{
