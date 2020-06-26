@@ -2,7 +2,28 @@
 \alias{NEWS}
 \title{NEWS file for the lamW package}
 
-\section{Version 1.3.2 (2020-05-25) }{
+\section{Version 1.3.3 (2020-06-26)}{
+  \subsection{Fixed}{
+    \itemize{
+      \item Corrected minor issues tripping CRAN checks
+      \item Adjusted linking to other packages in help documentation
+    }
+  }
+  \subsection{Changed}{
+    \itemize{
+      \item Moved repository to Github
+    }
+  }
+  \subsection{Added}{
+    \itemize{
+      \item Added travis, appveyor, and codecovr
+      \item Added check for package version and behavior at -1/e
+      \item explicit calls to \code{std::} in the C++ code
+    }
+  }
+}
+
+\section{Version 1.3.2 (2020-05-25)}{
   \subsection{Fixed}{
     \itemize{
       \item Corrected regression which treated PosInf and NegInf the same on
@@ -21,8 +42,8 @@
 \section{Version 1.3.1 (2020-05-24) [YANKED]}{
   \subsection{Added}{
     \itemize{
-      \item Use R magic words and Rcpp sugar instead of calls to STD
-      (caused regression)
+      \item Use R magic words and Rcpp sugar instead of calls to STD (caused
+      regression)
       \item Added more tests near asymptotes and for real vs. integer
       \item Added ORCID to DESCRIPTION
     }
@@ -50,7 +71,7 @@
   \subsection{Changed}{
     \itemize{
       \item Now using RcppParallel for calculation. Speedup when calculating
-      more than one value at a time should be noticeable, e.g. around a 5x
+      more than one value at a time should be noticeable, e.g. around a 5X
       speedup on an 8 core machine. There should be no noticeable change when
       calculating single values at a time.
     }
@@ -93,8 +114,8 @@
       \item Update to initial release
       \item Adjust NEWS to more closely follow
       \href{http://keepachangelog.com/}{keep a changelog} suggestions
-      \item Removed mention of LambertW and its importing \link{gsl} from
-      documentation as it now imports this package
+      \item Removed mention of LambertW and its importing the \code{gsl} package
+      from the documentation as it now imports this package instead.
 
     }
   }
