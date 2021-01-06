@@ -1,6 +1,19 @@
 \name{NEWS}
 \alias{NEWS}
+\alias{Changelog}
 \title{NEWS file for the lamW package}
+
+\section{Version 2.0.0 (2021-01-05)}{
+  \subsection{Changed}{
+    \itemize{
+      \item Used series expansion around 0 for more accurate return value for
+      \eqn{x \le 10^{-16}} (thanks to Jerry Lewis)
+      \item Contracted region around \eqn{\frac{-1}{e}}{-1/e} which returns -1
+      to \code{Machine$double.eps}
+      \item Converted continuous integration to Github actions
+    }
+  }
+}
 
 \section{Version 1.3.3 (2020-06-26)}{
   \subsection{Fixed}{
@@ -17,7 +30,8 @@
   \subsection{Added}{
     \itemize{
       \item Added travis, appveyor, and codecovr
-      \item Added check for package version and behavior at -1/e
+      \item Added check for package version and behavior at
+      \eqn{\frac{-1}{e}}{-1/e}
       \item explicit calls to \code{std::} in the C++ code
     }
   }
@@ -113,7 +127,7 @@
     \itemize{
       \item Update to initial release
       \item Adjust NEWS to more closely follow
-      \href{http://keepachangelog.com/}{keep a changelog} suggestions
+      \href{https://keepachangelog.com/}{keep a changelog} suggestions
       \item Removed mention of LambertW and its importing the \code{gsl} package
       from the documentation as it now imports this package instead.
 

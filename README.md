@@ -1,8 +1,8 @@
 <!-- badges: start -->
 [![CRAN Status Badge](https://www.r-pkg.org/badges/version/lamW)](https://CRAN.R-project.org/package=lamW)
+[![](http://cranlogs.r-pkg.org/badges/last-month/lamW)](https://cran.r-project.org/package=lamW)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/2022/badge)](https://bestpractices.coreinfrastructure.org/projects/2022)
-[![Travis build status](https://travis-ci.com/aadler/lamW.svg?branch=master)](https://travis-ci.com/aadler/lamW)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/aadler/lamW?branch=master&svg=true)](https://ci.appveyor.com/project/aadler/lamW)
+[![R-CMD-check](https://github.com/aadler/lamW/workflows/R-CMD-check/badge.svg)](https://github.com/aadler/lamW/actions)
 [![Codecov test coverage](https://codecov.io/gh/aadler/lamW/branch/master/graph/badge.svg)](https://codecov.io/gh/aadler/lamW?branch=master)
 <!-- badges: end -->
 
@@ -17,7 +17,7 @@ significant speed.
 ## Citation
 If you use the package, please cite it as:
 
-  Avraham Adler (2015). lamW: Lambert-W Function. R package version 1.3.3.
+  Avraham Adler (2015). lamW: Lambert-W Function. R package version 2.0.0.
   https://bitbucket.org/aadler/lamw
 
 A BibTeX entry for LaTeX users is:
@@ -28,7 +28,7 @@ A BibTeX entry for LaTeX users is:
     author = {Avraham Adler},
     year = {2015},
     url = {https://CRAN.R-project.org/package=lamW},
-    note = {R package version 1.3.3.},
+    note = {R package version 2.0.0.},
   }
 ```
 
@@ -37,11 +37,11 @@ Please ensure that all contributions comply with both
 [R and CRAN standards for packages](https://cran.r-project.org/doc/manuals/r-release/R-exts.html).
 
 ### Versioning
-This project attempts to follow [Semantic Versioning](http://semver.org/)
+This project attempts to follow [Semantic Versioning](https://semver.org/)
 
 ### Changelog
 This project attempts to follow the changelog system at
-[Keep a CHANGELOG](http://keepachangelog.com/)
+[Keep a CHANGELOG](https://keepachangelog.com/)
 
 ### Dependancies
 This project intends to have as few dependancies as possible. Please consider
