@@ -3,11 +3,21 @@
 \alias{Changelog}
 \title{NEWS file for the lamW package}
 
+\section{Version 2.1.0 (2021-05-20)}{
+  \subsection{Changed}{
+    \itemize{
+      \item Obtained access to original Fritsch paper and used supplied Pade
+      expansion (equation 5) for values close to 0, eliminating need for Halley
+      step close to 0 and speeding up code slightly
+    }
+  }
+}
+
 \section{Version 2.0.0 (2021-01-05)}{
   \subsection{Changed}{
     \itemize{
       \item Used series expansion around 0 for more accurate return value for
-      \eqn{x \le 10^{-16}} (thanks to Jerry Lewis)
+      \eqn{x \le 10^{-16}}{x \le 1e-16} (thanks to Jerry Lewis)
       \item Contracted region around \eqn{\frac{-1}{e}}{-1/e} which returns -1
       to \code{Machine$double.eps}
       \item Converted continuous integration to Github actions
