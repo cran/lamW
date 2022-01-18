@@ -1,13 +1,13 @@
 <!-- badges: start -->
 [![CRAN Status Badge](https://www.r-pkg.org/badges/version/lamW)](https://CRAN.R-project.org/package=lamW)
 [![](http://cranlogs.r-pkg.org/badges/last-month/lamW)](https://cran.r-project.org/package=lamW)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874874.svg)](https://doi.org/10.5281/zenodo.5874874)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/2022/badge)](https://bestpractices.coreinfrastructure.org/projects/2022)
 [![R-CMD-check](https://github.com/aadler/lamW/workflows/R-CMD-check/badge.svg)](https://github.com/aadler/lamW/actions)
-[![Codecov test coverage](https://codecov.io/gh/aadler/lamW/branch/master/graph/badge.svg)](https://codecov.io/gh/aadler/lamW?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/aadler/lamW/branch/master/graph/badge.svg)](https://app.codecov.io/gh/aadler/lamW?branch=master)
 <!-- badges: end -->
 
 # lamW
-
 **lamW** is an `R` package which calculates the real-valued branches of the
 [Lambert-W function](https://en.wikipedia.org/wiki/Lambert_W_function) without
 the need to install the entire GSL. It uses compiled code and 
@@ -17,8 +17,8 @@ significant speed.
 ## Citation
 If you use the package, please cite it as:
 
-  Avraham Adler (2015). lamW: Lambert-W Function. R package version 2.1.0.
-  https://CRAN.R-project.org/package=lamW
+  Avraham Adler (2015). lamW: Lambert-W Function. R package version 2.1.1.
+  https://CRAN.R-project.org/package=lamW doi: 10.5281/zenodo.5874874
 
 A BibTeX entry for LaTeX users is:
 
@@ -28,10 +28,10 @@ A BibTeX entry for LaTeX users is:
     author = {Avraham Adler},
     year = {2015},
     url = {https://CRAN.R-project.org/package=lamW},
-    note = {R package version 2.1.0.},
+    doi = "10.5281/zenodo.5874874",
+    note = {R package version 2.1.1.},
   }
 ```
-
 ## Contributions
 Please ensure that all contributions comply with both
 [R and CRAN standards for packages](https://cran.r-project.org/doc/manuals/r-release/R-exts.html).
@@ -55,7 +55,7 @@ character lines, two-space indentations).
 Please provide valid .Rd files and **not** roxygen-style documentation.
 
 ### Tests
-Please review the current test suite and supply similar `testthat`-compatible
+Please review the current test suite and supply similar `tinytest`-compatible
 unit tests for all added functionality.
 
 ### Submission
