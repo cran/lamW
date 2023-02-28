@@ -17,7 +17,7 @@ significant speed.
 ## Citation
 If you use the package, please cite it as:
 
-  Avraham Adler (2015). lamW: Lambert-W Function. R package version 2.1.1.
+  Avraham Adler (2015). lamW: Lambert-W Function. R package version 2.1.2.
   https://CRAN.R-project.org/package=lamW doi: 10.5281/zenodo.5874874
 
 A BibTeX entry for LaTeX users is:
@@ -29,7 +29,7 @@ A BibTeX entry for LaTeX users is:
     year = {2015},
     url = {https://CRAN.R-project.org/package=lamW},
     doi = "10.5281/zenodo.5874874",
-    note = {R package version 2.1.1.},
+    note = {R package version 2.1.2.},
   }
 ```
 ## Contributions
@@ -43,13 +43,14 @@ This project attempts to follow [Semantic Versioning](https://semver.org/)
 This project attempts to follow the changelog system at
 [Keep a CHANGELOG](https://keepachangelog.com/)
 
-### Dependancies
-This project intends to have as few dependancies as possible. Please consider
+### Dependencies
+This project intends to have as few dependencies as possible. Please consider
 that when writing code.
 
 ### Style
-Please review and conform to the current code stylistic choices (e.g. 80
-character lines, two-space indentations).
+Please conform to this
+[coding style guide](https://www.avrahamadler.com/coding-style-guide/) as best
+possible.
 
 ### Documentation
 Please provide valid .Rd files and **not** roxygen-style documentation.
@@ -65,6 +66,33 @@ issue as well. To supply a pull request (PR), please:
 
  1. Fork the project and then clone into your own local repository
  2. Create a branch in your repository in which you will make your changes
- 3. Push that branch to your remote and then create a pull request
+ 3. Ideally use -s to sign-off on commits under the
+ [Developer Certificate of Origin](https://developercertificate.org/).
+ 4. If possible, sign commits using a GPG key.
+ 5. Push that branch and then create a pull request
  
-At this point, the PR will be discussed and eventually accepted or rejected.
+At this point, the PR will be discussed and eventually accepted or rejected by
+the lead maintainer.
+
+## Roadmap
+### Major
+
+ * There are no plans for major changes in the foreseeable future
+ 
+### Minor
+
+ * There are no plans for minor changes in the foreseeable future
+
+## Security
+### Expectations
+This package is a calculation engine and requires no secrets or private
+information. It is checked for memory leaks prior to releases to CRAN using
+ASAN/UBSBAN. Dissemination is handled by CRAN. Bugs are reported via the tracker
+and handled as soon as possible.
+
+### Assurance
+The threat model is that a malicious actor would "poison" the package code by
+adding in elements having nothing to do with the package's purpose but which
+would be used for malicious purposes. This is protected against by having the
+email account of the maintainer—used for verification by CRAN—protected by a
+physical 2FA device (Yubikey) which is carried by the lead maintainer.

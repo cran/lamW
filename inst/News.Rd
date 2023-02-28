@@ -3,12 +3,27 @@
 \alias{Changelog}
 \title{NEWS file for the lamW package}
 
+\section{Version 2.1.2 (2023-02-28)}{
+  \subsection{Changed}{
+    \itemize{
+      \item Adjusted TBB grain size to prevent parallelism for fewer than 4
+      elements.
+      \item Streamlined C++ code to follow more logical ifelse cascade
+      \item Removed unneeded setup from C++ and R calls.
+      \item Cleaned up documentation.
+      \item CITATION updated to use \code{bibentry} per CRAN request
+      \item Updated internal code to be more compliant with personal style guide
+      \item Updated Github actions
+    }
+  }
+}
+
 \section{Version 2.1.1 (2022-01-18)}{
   \subsection{Changed}{
     \itemize{
       \item Converted test suite to \code{tinytest} framework to reduce
       dependencies.
-      \item Added DOI and CFF for citation purposes
+      \item Added DOI and CFF for citation purposes.
     }
   }
 }
@@ -18,7 +33,7 @@
     \itemize{
       \item Obtained access to original Fritsch paper and used supplied Pade
       expansion (equation 5) for values close to 0, eliminating need for Halley
-      step close to 0 and speeding up code slightly
+      step close to 0 and speeding up code slightly.
     }
   }
 }
@@ -27,10 +42,10 @@
   \subsection{Changed}{
     \itemize{
       \item Used series expansion around 0 for more accurate return value for
-      \eqn{x \le 10^{-16}}{x \le 1e-16} (thanks to Jerry Lewis)
+      \eqn{x \le 10^{-16}}{x \le 1e-16} (thanks to Jerry Lewis).
       \item Contracted region around \eqn{\frac{-1}{e}}{-1/e} which returns -1
-      to \code{Machine$double.eps}
-      \item Converted continuous integration to Github actions
+      to \code{Machine$double.eps}.
+      \item Converted continuous integration to Github actions.
     }
   }
 }
@@ -38,21 +53,21 @@
 \section{Version 1.3.3 (2020-06-26)}{
   \subsection{Fixed}{
     \itemize{
-      \item Corrected minor issues tripping CRAN checks
-      \item Adjusted linking to other packages in help documentation
+      \item Corrected minor issues tripping CRAN checks.
+      \item Adjusted linking to other packages in help documentation.
     }
   }
   \subsection{Changed}{
     \itemize{
-      \item Moved repository to Github
+      \item Moved repository to Github.
     }
   }
   \subsection{Added}{
     \itemize{
-      \item Added travis, appveyor, and codecovr
+      \item Added travis, appveyor, and codecovr.
       \item Added check for package version and behavior at
-      \eqn{\frac{-1}{e}}{-1/e}
-      \item explicit calls to \code{std::} in the C++ code
+      \eqn{\frac{-1}{e}}{-1/e}.
+      \item explicit calls to \code{std::} in the C++ code.
     }
   }
 }
@@ -61,14 +76,14 @@
   \subsection{Fixed}{
     \itemize{
       \item Corrected regression which treated PosInf and NegInf the same on
-      principle branch (thanks to CRAN & Uwe Ligges)
+      principle branch (thanks to CRAN & Uwe Ligges).
     }
   }
   \subsection{Added}{
     \itemize{
       \item Added test to ensure PosInf and NegInf are properly identified
-      accurately
-      \item Expanded existing tests
+      accurately.
+      \item Expanded existing tests.
     }
   }
 }
@@ -77,18 +92,18 @@
   \subsection{Added}{
     \itemize{
       \item Use R magic words and Rcpp sugar instead of calls to STD (caused
-      regression)
-      \item Added more tests near asymptotes and for real vs. integer
-      \item Added ORCID to DESCRIPTION
+      regression).
+      \item Added more tests near asymptotes and for real vs. integer.
+      \item Added ORCID to DESCRIPTION.
     }
   }
   \subsection{Changed}{
     \itemize{
       \item Reduced max interations in some loops as convergence acheived more
-      quickly
-      \item Refactored old nomenclature
-      \item Cleaned code for whitespace and unnecessary comments
-      \item Spellcheck and minor cleanup of help file
+      quickly.
+      \item Refactored old nomenclature.
+      \item Cleaned code for whitespace and unnecessary comments.
+      \item Spellcheck and minor cleanup of help file.
     }
   }
 }
@@ -116,12 +131,12 @@
   \subsection{Added}{
     \itemize{
       \item Added testing for proper behavior near 0 due to log in Fritsch step
-      implementation
+      implementation.
     }
   }
   \subsection{Fixed}{
     \itemize{
-      \item Edited NEWS.Rd so that it shows properly on CRAN
+      \item Edited NEWS.Rd so that it shows properly on CRAN.
     }
   }
 }
@@ -131,7 +146,7 @@
     \itemize{
       \item Switched from exclusively using Halley iteration to usually using
       Fritsch iteration resulting in a significant increase in speed in both
-      branches
+      branches.
     }
   }
 }
@@ -145,9 +160,9 @@
   }
   \subsection{Changed}{
     \itemize{
-      \item Update to initial release
+      \item Update to initial release.
       \item Adjust NEWS to more closely follow
-      \href{https://keepachangelog.com/}{keep a changelog} suggestions
+      \href{https://keepachangelog.com/}{keep a changelog} suggestions.
       \item Removed mention of LambertW and its importing the \code{gsl} package
       from the documentation as it now imports this package instead.
 
@@ -161,14 +176,14 @@
       \item Have both branches of the function return their respective limits.
       The main branch returns \code{Inf} when it is passed \code{Inf} and the
       secondary branch returns -\code{Inf} when it is passed 0 (Thanks to Georg
-      M. Gorg)
+      M. Gorg).
     }
   }
   \subsection{Changed}{
     \itemize{
-      \item Make unit tests more robust
+      \item Make unit tests more robust.
       \item Update code for tests for equality for changes in \code{testthat}
-      package
+      package.
     }
   }
 }
@@ -177,23 +192,23 @@
   \subsection{Fixed}{
     \itemize{
       \item Remove extra parenthesis which was causing boolean to be passed to
-      \code{fabs} (thanks to Professor Brian Ripley)
+      \code{fabs} (thanks to Professor Brian Ripley).
     }
   }
   \subsection{Added}{
     \itemize{
-      \item Added URL and Bugreports to DESCRIPTION
+      \item Added URL and Bugreports to DESCRIPTION.
       \item Implemented minor optimizations to reduce number of needed
-      calculations
+      calculations.
       \item Added comments to source explaining Halley step and provenance of
-      numeric coefficients in Pade approximant
-      \item Added more robust unit testing
+      numeric coefficients in Pade approximant.
+      \item Added more robust unit testing.
     }
   }
   \subsection{Changed}{
     \itemize{
-      \item Enhanced and cleaned documentation
-      \item Cleaned up source code from unnecessary comments
+      \item Enhanced and cleaned documentation.
+      \item Cleaned up source code from unnecessary comments.
     }
   }
 }
@@ -201,7 +216,7 @@
 \section{Version 0.0.1 (2015-05-19)}{
   \subsection{Added}{
     \itemize{
-      \item Initial release
+      \item Initial release.
     }
   }
 }
