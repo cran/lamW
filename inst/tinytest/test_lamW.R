@@ -1,3 +1,6 @@
+# Copyright (c) 2015, Avraham Adler All rights reserved
+# SPDX-License-Identifier: BSD-2-Clause
+
 tol <- sqrt(.Machine$double.eps)
 # Test that functions return proper values
 principleBranchAnswers <- runif(5000, min = -1, max = 703.22703310477016)
@@ -17,9 +20,7 @@ expect_equal(lambertW0(1000) * exp(lambertW0(1000)), 1000, tolerance = tol)
 # Test that function behaves properly near 0
 V0 <- seq(-2e-2, 2e-2, 2e-6)
 V0E <- V0 * exp(V0)
-LV0 <- lambertW0(V0E)
-
-expect_equal(V0, LV0, tolerance = tol)
+expect_equal(lambertW0(V0E), V0, tolerance = tol)
 
 # Test that W0 behaves properly VERY close to 0
 expect_identical(lambertW0(1e-275), 1e-275)
@@ -34,15 +35,12 @@ expect_identical(lambertWm1(-1 / exp(1)), -1)
 L <- seq(1e-6 - exp(-1), -0.25, 3e-6)
 V0 <- lambertW0(L)
 vm1 <- lambertWm1(L)
-
 expect_equal(V0 * exp(V0), L, tolerance = tol)
 expect_equal(vm1 * exp(vm1), L, tolerance = tol)
 
 vm1 <- seq(-714, -714.96865, -3e-5)
 vm1E <- vm1 * exp(vm1)
-lvm1 <- lambertWm1(vm1E)
-
-expect_equal(vm1, lvm1, tolerance = tol)
+expect_equal(lambertWm1(vm1E), vm1, tolerance = tol)
 
 # Test that function behaves properly at its asymptotes
 expect_identical(lambertW0(Inf), Inf)
@@ -59,8 +57,4 @@ expect_true(is.nan(lambertWm1(1.2)))  # x > 0
 
 # Test that integers are converted to reals for principle branch
 expect_identical(lambertW0(c(-1L, 0L, 1L, 2L, 3L, 4L)),
-             lambertW0(c(-1, 0, 1, 2, 3, 4)))
-
-## Test CITATION
-expect_true(any(grepl(packageVersion("lamW"), toBibtex(citation("lamW")),
-                      fixed = TRUE)))
+                 lambertW0(c(-1, 0, 1, 2, 3, 4)))

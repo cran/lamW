@@ -3,6 +3,8 @@
 Copyright (C) 2015, Avraham Adler
 All rights reserved.
 
+SPDX-License-Identifier: BSD-2-Clause
+
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 * Redistributions of source code must retain the above copyright notice, this
@@ -73,6 +75,39 @@ double FritschIter(double x, double w){
   return(w);
 }
 
+// Do not include Halley in coverage testing since unused
+// # nocov start
+
+/* Halley Iteration
+ Given x, we want to find W such that Wexp(W) = x, so Wexp(W) - x = 0.
+ We can use Halley iteration to find this root; to do so it needs first and
+ second derivative.
+ f(W)    = W * exp(W) - x
+ f'(W)   = W * exp(W) + exp(W)       = exp(W) * (W + 1)
+ f''(W)  = exp(W) + (W + 1) * exp(W) = exp(W) * (W + 2)
+ Halley Step:
+ W_{n+1} = W_n - {2 * f(W_n) * f'(W_n)} / {2 * [f'(W_n)]^2 - f(W_n) * f''(W_n)}
+ */
+
+// Unused as minimax approximation used instead but mechanism left active.
+double HalleyIter(double x, double w_guess){
+  double w = w_guess;
+  int MaxEval = 16;
+  bool CONVERGED = false;
+  int i = 0;
+  do {
+    double ew = exp(w);
+    double w1 = w + 1.0;
+    double f0 = w * ew - x;
+    f0 /= ((ew * w1) - (((w1 + 1.0) * f0) / (2 * w1))); /* Corliss et al. 5.9 */
+    CONVERGED = fabs(f0) <= EPS;
+    w -= f0;
+    ++i;
+  } while (!CONVERGED && i < MaxEval);
+  return(w);
+}
+// # nocov end
+
 double lambertW0_CS(double x) {
   if (x == R_PosInf) {
     return(R_PosInf);
@@ -90,19 +125,33 @@ double lambertW0_CS(double x) {
   } else {
     double w;
     if (std::abs(x) <= 6.4e-3) {
-      /* Use equation (5) in Fritsch */
-      w = ((1.33333333333333333 * x + 1.0) * x) /
-        ((0.83333333333333333 * x + 2.33333333333333333) * x + 1.0);
+      /* When this close to 0 the Fritsch iteration may underflow. Instead,
+       * function will use degree-6 minimax polynomial approximation of Halley
+       *  iteration-based values. Should be more accurate by three orders of
+       *   magnitude than Fritsch's equation (5) in this range.
+       */
+
+      // Halley Code
+      // double p = std::sqrt(2.0 * (M_E * x + 1.0));
+      // double Numer = (0.2787037037037037 * p + 0.311111111111111) * p - 1.0;
+      // double Denom = (0.0768518518518518 * p + 0.688888888888889) * p + 1.0;
+      // return(HalleyIter(x, Numer / Denom));
+
+      // Minimax Approximation calculated using R package minimaxApprox 0.1.0
+      return((((((-1.0805085529250425e1 * x + 5.2100070265741278) * x -
+        2.6666665063383532) * x + 1.4999999657268301) * x -
+        1.0000000000016802) * x + 1.0000000000001752) * x +
+        2.6020852139652106e-18);
     } else if (x <= M_E) {
-      /* Use expansion in Corliss 4.22 to create (3, 2) Pade approximant
-      Numerator:-10189 / 303840 * p^3 + 40529 / 303840 * p^2 + 489 / 844 * p-1
-      Denominator: -14009 / 303840 * p^2 + 355 / 844 * p + 1
-      Converted to digits to reduce needed operations
+      /* Use expansion in Corliss 4.22 to create (2, 2) Pade approximant.
+       * Equation with a few extra terms is:
+       * -1 + p - 1/3p^2 + 11/72p^3 - 43/540p^4 + 689453/8398080p^4 - O(p^5)
+       * This is just used to estimate a good starting point for the Fritsch
+       * iteration process itself.
       */
       double p = std::sqrt(2.0 * (M_E * x + 1.0));
-      double Numer = ((-0.03353409689310163 * p + 0.1333892838335966) * p +
-                      0.5793838862559242) * p - 1.0;
-      double Denom = (-0.04610650342285413 * p + 0.4206161137440758) * p + 1.0;
+      double Numer = (0.2787037037037037 * p + 0.311111111111111) * p - 1.0;
+      double Denom = (0.0768518518518518 * p + 0.688888888888889) * p + 1.0;
       w = Numer / Denom;
     } else {
       /* Use first five terms of Corliss et al. 4.19 */

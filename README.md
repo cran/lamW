@@ -1,10 +1,11 @@
 <!-- badges: start -->
 [![CRAN Status Badge](https://www.r-pkg.org/badges/version/lamW)](https://CRAN.R-project.org/package=lamW)
 [![](http://cranlogs.r-pkg.org/badges/last-month/lamW)](https://cran.r-project.org/package=lamW)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874874.svg)](https://doi.org/10.5281/zenodo.5874874)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/2022/badge)](https://bestpractices.coreinfrastructure.org/projects/2022)
-[![R-CMD-check](https://github.com/aadler/lamW/workflows/R-CMD-check/badge.svg)](https://github.com/aadler/lamW/actions)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/lamW)](https://cran.r-project.org/package=lamW)
+[![R-CMD-check](https://github.com/aadler/lamW/workflows/R-CMD-check/badge.svg)](https://github.com/aadler/lamW/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/aadler/lamW/branch/master/graph/badge.svg)](https://app.codecov.io/gh/aadler/lamW?branch=master)
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/2022/badge)](https://bestpractices.coreinfrastructure.org/projects/2022)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874874.svg)](https://doi.org/10.5281/zenodo.5874874)
 <!-- badges: end -->
 
 # lamW
@@ -17,7 +18,7 @@ significant speed.
 ## Citation
 If you use the package, please cite it as:
 
-  Avraham Adler (2015). lamW: Lambert-W Function. R package version 2.1.2.
+  Avraham Adler (2015). lamW: Lambert-W Function. R package version 2.2.0.
   https://CRAN.R-project.org/package=lamW doi: 10.5281/zenodo.5874874
 
 A BibTeX entry for LaTeX users is:
@@ -29,7 +30,7 @@ A BibTeX entry for LaTeX users is:
     year = {2015},
     url = {https://CRAN.R-project.org/package=lamW},
     doi = "10.5281/zenodo.5874874",
-    note = {R package version 2.1.2.},
+    note = {R package version 2.2.0.},
   }
 ```
 ## Contributions
@@ -87,7 +88,7 @@ the lead maintainer.
 ### Expectations
 This package is a calculation engine and requires no secrets or private
 information. It is checked for memory leaks prior to releases to CRAN using
-ASAN/UBSBAN. Dissemination is handled by CRAN. Bugs are reported via the tracker
+ASAN/UBSAN. Dissemination is handled by CRAN. Bugs are reported via the tracker
 and handled as soon as possible.
 
 ### Assurance
