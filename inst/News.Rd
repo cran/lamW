@@ -3,9 +3,21 @@
 
 \name{NEWS}
 \alias{NEWS}
-\alias{Changelog}
 \title{NEWS file for the lamW package}
 \encoding{UTF-8}
+
+\section{Version 2.2.1 (2023-10-04)}{
+  \subsection{Changed}{
+    \itemize{
+      \item Removed line from \file{NEWS.Rd} which may have been preventing
+      proper rendering on \acronym{CRAN}.
+      \item added \code{$(LTO_OPT)} to \file{Makevars} and \file{Makevars.win}
+      and \code{UseLTO} to \file{DESCRIPTION}.
+      \item Cleaned up \file{README.md} and moved citation, contributions, and
+      security information to their own files.
+    }
+  }
+}
 
 \section{Version 2.2.0 (2023-08-07)}{
   \subsection{Changed}{
