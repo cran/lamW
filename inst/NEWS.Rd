@@ -6,6 +6,21 @@
 \title{NEWS file for the lamW package}
 \encoding{UTF-8}
 
+\section{Version 2.2.4 (2024-06-16)}{
+  \subsection{Added}{
+    \itemize{
+      \item Installed new version of \pkg{rhub} testing.
+    }
+  }
+  \subsection{Changed}{
+    \itemize{
+      \item Updated \acronym{DOI} to native \acronym{CRAN}.
+      \item Minor changes to C code for consistency.
+      \item Updated package metadata unit tests.
+    }
+  }
+}
+
 \section{Version 2.2.3 (2023-11-28)}{
   \subsection{Fixed}{
     \itemize{
