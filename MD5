@@ -1,12 +1,12 @@
-a6b334268664a4fe1d4afebe0aad5d18 *DESCRIPTION
+52fcd30dfa63903cef665f8051d6feca *DESCRIPTION
 9fe401759a8da27089ef3979da17fa74 *LICENSE
 5b3881a6e3f1678e6492cb7e80d2e559 *NAMESPACE
 4a4febc6eb9bbe58cc4ef2805e2a4f6c *R/RcppExports.R
 a32feeafbebeada43682c0626ecce110 *R/lamW.R
 0142a2b67afd1dbbfd4d27e17300aee5 *README.md
-3c69e4e261e8b5160785ee51fbe03d07 *build/partial.rdb
-02a352827ae36a08d992fdf786a8aa9f *inst/CITATION
-355c087c376ea0af8a10c3fba948b537 *inst/NEWS.Rd
+031875b9c1e2ea854ab82962bdad7523 *build/partial.rdb
+9806fab98df39ad94a0c1c5196d3146b *inst/CITATION
+7d8b15ea31aec96c9abcbdec7f77cc27 *inst/NEWS.Rd
 a4124c5d0c43aea90093188d44509854 *inst/include/lamW.h
 6dbd1706b7f5f13a00ad8f9fad0dc340 *inst/include/lamW_RcppExports.h
 7bf60954b60c397863fd5b98558f3c0c *inst/tinytest/test_lamW.R
@@ -16,6 +16,6 @@ a4124c5d0c43aea90093188d44509854 *inst/include/lamW.h
 3867448d81092eb4ab54b69ad4557f36 *man/lamW.Rd
 1efe934e119d049da781e53657b69d5d *src/Makevars
 cc78834491266f1fc33d5d80504495f0 *src/Makevars.win
-ecbee9bb967d1a3f914fe9524b1dfce4 *src/RcppExports.cpp
+13557a9627bdcc5c627f47a25203d3a6 *src/RcppExports.cpp
 a401e97ffa0ce37844cc98df65fc3794 *src/lambertW.cpp
 acc33156a11f2b43f8856b5eccc1f921 *tests/tinytest.R
